@@ -1,0 +1,76 @@
+.bg-custom{
+    background-color: #191919;
+    background-size: cover;
+}
+
+.nav-custom-style{
+    border-bottom: unset;
+    color: white;
+    font-weight: bold;
+    letter-spacing: normal;
+}
+
+.card{
+    background-color: unset;
+    border:unset;
+}
+
+.font-size-adjust{
+    font-size: 23px;
+}
+
+.card-header {
+    padding: .75rem 0;
+}
+
+.card-body{
+    padding: .75rem 0;
+}
+
+.active{
+    color: #f9004d;
+    transition: 0.35s ease-in-out;
+}
+
+.font-custom-color{
+    color: white;
+}
+
+a {
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.15em;
+    
+    display: inline-block;
+    position: relative;
+  }
+  .mode a:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: -10px;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #f9004d;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+  .mode a:hover:after { 
+    width: 100%; 
+    left: 0; 
+  }
+
+  .detail-view{
+      padding:0;
+      list-style: none;
+  }
+
+  .col{
+      padding:0;
+  }
+
+  .fade-in{
+      transition: 0.5s ease-in-out;
+  }

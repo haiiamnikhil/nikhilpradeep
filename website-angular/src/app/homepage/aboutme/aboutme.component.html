@@ -1,0 +1,68 @@
+<section class="bg-custom min-height-600 d-flex align-items-center py-60">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <img src="assets/static/cartoon.png" alt="">
+            </div>
+            <div class="col-md-7">
+                <div class="section-title">
+                    <h2>About Me</h2>
+                    <p class="text-muted">This is a small into About myself</p>
+                </div>
+                <div class="card">
+                    <div class="card-header nav-custom-style">
+                        <ul class="nav d-flex justify-content-between font-size-adjust mode">
+                            <li [class.active]="viewMode == 'Skills'"><a type="button" (click)="viewMode = 'Skills'">Skills</a></li>
+                            <li [class.active]="viewMode == 'Experience'"><a type="button" (click)="viewMode = 'Experience'">Experience</a></li>
+                            <li [class.active]="viewMode == 'Awards'"><a type="button" (click)="viewMode = 'Awards'">Awards</a></li>
+                            <li [class.active]="viewMode == 'Education'"><a type="button" (click)="viewMode = 'Education'">Education</a></li>
+                        </ul>
+                    </div>
+                    <div class="card-body" [ngSwitch]="viewMode">
+                        <div class="col font-custom-color" *ngSwitchDefault>
+                            <div class="card fade-in">
+                                <div class="card-body">
+                                    <h3>Heading</h3>
+                                    <p>Content</p>
+                                </div>
+                                <div class="card-body">
+                                    <h3>Heading</h3>
+                                    <p>Content</p>
+                                </div>
+                                <div class="card-body">
+                                    <h3>Heading</h3>
+                                    <p>Content</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col font-custom-color" *ngSwitchCase="'Experience'">
+                            <div class="card fade-in">
+                                <div class="card-body">
+                                    <h3>Heading</h3>
+                                    <p>Content</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col font-custom-color" *ngSwitchCase="'Awards'">
+                            <div class="card fade-in">
+                                <div class="card-body">
+                                    <h3>Heading</h3>
+                                    <p>Content</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col font-custom-color" *ngSwitchCase="'Education'">
+                            <div class="card fade-in">
+                                <div class="card-body">
+                                    <h3>Heading</h3>
+                                    <p>Content</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,15 @@
+.intro{
+    background-image: url("./../../../../static/img/into-background.png");
+    color:rgb(219, 219, 219);
+    min-height: 600px;
+    background-size: cover;
+}
+
+.img-thumbnail{
+    background-color: unset;
+    border:none
+}
+
+.letter-spacing-custom{
+    letter-spacing: 5px;
+}
