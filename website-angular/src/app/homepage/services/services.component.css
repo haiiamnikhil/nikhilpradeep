@@ -5,11 +5,12 @@
 .card{
     transition: 0.25s ease-in-out;
     background-color: #000000;
-    color: white;
+    color:white;
 }
 
 .card:hover{
     transform: scale(1.05);
     color: white !important;
     background-image: linear-gradient(to right, red, rgb(255, 0, 170));
+    cursor:pointer;
 }
