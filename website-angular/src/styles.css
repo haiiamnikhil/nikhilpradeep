@@ -227,3 +227,19 @@ h2:after {
     background-color: #191919;
     background-size: cover;
 }
+
+.container-width-80{
+    max-width: 80% !important;
+}
+
+.container-width-70{
+    max-width: 70% !important;
+}
+
+.container-width-90{
+    max-width: 90% !important;
+}
+
+.bg-black-dark{
+    background-color: #101010;
+}
