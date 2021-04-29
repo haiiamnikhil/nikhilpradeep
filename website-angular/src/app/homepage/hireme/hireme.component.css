@@ -1,0 +1,10 @@
+.form-control {
+    height:calc(2.5em + .75rem + 2px);
+    color: white;
+    background-color: #101010;
+    border: 1px solid #85888a;
+}
+
+.text-area{
+    height:auto !important;
+}

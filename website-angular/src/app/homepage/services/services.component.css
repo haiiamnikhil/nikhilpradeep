@@ -9,7 +9,7 @@
 
 .card:hover{
     transform: scale(1.03);
-    color: white !important;
+    color: #000000 !important;
     background-color: #f9004d;
     cursor:pointer;
 }

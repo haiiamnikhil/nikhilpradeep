@@ -5,12 +5,15 @@
     src: local("Poppins"), url("./assets/fonts/Poppins/Poppins-SemiBold.ttf")
 }
 
+html {
+    scroll-behavior: smooth;
+  }
+
 *{
     font-family: "Poppins";
 }
 
 h2{
-    font-size: 40px;
     color: white;
     text-transform: uppercase;
     letter-spacing:5px; 
@@ -242,4 +245,9 @@ h2:after {
 
 .bg-black-dark{
     background-color: #101010;
+}
+
+
+.align-flex-items-between{
+    justify-content: space-between;
 }
