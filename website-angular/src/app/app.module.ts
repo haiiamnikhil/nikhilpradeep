@@ -10,7 +10,8 @@ import { AboutmeComponent } from './homepage/aboutme/aboutme.component';
 import { ServicesComponent } from './homepage/services/services.component';
 import { ProjectsComponent } from './homepage/projects/projects.component';
 import { HiremeComponent } from './homepage/hireme/hireme.component';
-import { ProjectdetailComponent } from './detailpages/projectdetail/projectdetail.component';
+import { ProjectlistComponent } from './detailpages/projectlist/projectlist.component';
+import { ProjectdetailsComponent } from './detailpages/projectdetails/projectdetails.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ProjectdetailComponent } from './detailpages/projectdetail/projectdetai
     ServicesComponent,
     ProjectsComponent,
     HiremeComponent,
-    ProjectdetailComponent
+    ProjectlistComponent,
+    ProjectdetailsComponent
   ],
   imports: [
     BrowserModule,

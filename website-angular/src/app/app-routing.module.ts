@@ -1,6 +1,7 @@
+import { ProjectdetailsComponent } from './detailpages/projectdetails/projectdetails.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ProjectdetailComponent } from './detailpages/projectdetail/projectdetail.component';
+import { ProjectlistComponent } from './detailpages/projectlist/projectlist.component';
 import { HomepageComponent } from './homepage/homepage.component';
 
 
@@ -10,7 +11,10 @@ const routes: Routes = [
     component: HomepageComponent
   },
   {
-    path:'projects', component: ProjectdetailComponent
+    path:'projects', component: ProjectlistComponent
+  },
+  {
+    path:'projects/:projectid', component: ProjectdetailsComponent
   },
 ];
 

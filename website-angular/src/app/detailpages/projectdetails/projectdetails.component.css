@@ -1,0 +1,10 @@
+.banner-image{
+    background-image: url("../../../assets/banners/project-banner.jpg");
+    width: 100%;
+    display: flex;
+    background-repeat: no-repeat;
+    background-color: #4e4984;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
