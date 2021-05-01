@@ -16,9 +16,12 @@
     height: 400px;
 }
 
-#particles-js h1{
+#particles-js .container{
     position: absolute;
     color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 hr{

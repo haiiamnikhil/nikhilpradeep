@@ -1,4 +1,6 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
+import { ApiServices } from 'src/app/Api/api.service';
 
 @Component({
   selector: 'app-projects',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProjectsComponent implements OnInit {
 
-  constructor() { }
+  projects:any = []
 
-  ngOnInit(): void {
+  constructor(private router: Router, private api:ApiServices) { }
+
+  ngOnInit(){
+    
+    this.api.latestProjects().subscribe(response => {
+      if (response.status){
+        this.projects.push(response.data)
+      }
+    }, err => console.log(err))
+  }
+
+  selectedProject(project:any){
+    this.router.navigate(['/projects',project])
   }
 
 }

@@ -1,4 +1,6 @@
+import { ScrollDispatcher } from '@angular/cdk/scrolling';
 import { Component, OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-homepage',
@@ -6,10 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./homepage.component.css']
 })
 export class HomepageComponent implements OnInit {
-
-  constructor() { }
+  isActive:boolean = false;
+  constructor(private scroll: ScrollDispatcher) { }
 
   ngOnInit(): void {
+    this.isActive = true;
+    // this.scroll.scrolled().subscribe(response => console.log('scrolled'))
   }
 
 }
