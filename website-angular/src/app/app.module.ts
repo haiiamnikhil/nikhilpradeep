@@ -28,7 +28,7 @@ import { ProjectdetailsComponent } from './detailpages/projectdetails/projectdet
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

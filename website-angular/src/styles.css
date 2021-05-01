@@ -227,7 +227,7 @@ h2:after {
 }
 
 .bg-custom{
-    background-color: #191919;
+    background-color: #151515;
     background-size: cover;
 }
 
@@ -247,7 +247,30 @@ h2:after {
     background-color: #101010;
 }
 
+.bg-unset{
+    background-color:unset !important;
+}
 
 .align-flex-items-between{
     justify-content: space-between;
+}
+
+.lt-space-1{
+    letter-spacing: 1px;
+}
+
+.lt-space-2{
+    letter-spacing: 2px;
+}
+
+.lt-space-3{
+    letter-spacing: 3px;
+}
+
+.lt-space-4{
+    letter-spacing: 4px;
+}
+
+.lt-space-5{
+    letter-spacing: 5px;
 }
