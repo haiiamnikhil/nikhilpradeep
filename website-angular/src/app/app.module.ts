@@ -14,6 +14,7 @@ import { HiremeComponent } from './homepage/hireme/hireme.component';
 import { ProjectlistComponent } from './detailpages/projectlist/projectlist.component';
 import { ProjectdetailsComponent } from './detailpages/projectdetails/projectdetails.component';
 import { ScrollingModule } from '@angular/cdk/scrolling'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,8 @@ import { ScrollingModule } from '@angular/cdk/scrolling'
     AppRoutingModule,
     HttpClientModule,
     ScrollingModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [ApiServices],
   bootstrap: [AppComponent]

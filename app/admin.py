@@ -4,3 +4,4 @@ from .models import *
 
 admin.site.register(Projects)
 admin.site.register(ProjectTech)
+admin.site.register(Contact)

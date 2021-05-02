@@ -8,4 +8,6 @@ urlpatterns = [
     path('projects/<str:projectname>/',projectDetails,name="projectsDetails"),
     path('api/latest-projects/',latestProject,name="latestProjectView"),
     path('api/list-projects/',projectsList,name="projectsList"),
+
+    path('api/contact-details/',contact,name="contactDetails"),
 ]

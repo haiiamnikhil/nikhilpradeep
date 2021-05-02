@@ -7,55 +7,100 @@
             <div class="col-md-7">
                 <div class="section-title">
                     <h2>About Me</h2>
-                    <p class="text-muted">This is a small into About myself</p>
+                    <p class="text-muted">I have been a part of various IT industries for the past 3.5 years as a Python
+                        Developer. In mean-while, I have also engaged in the latest technologies that arrived and kept
+                        updated. Commitment towards my career gave me the confidence in handling the pressure at work
+                        place and to advance a flexibly working pattern in a team. Being a self-learner, all those
+                        technologies mentioned on Resume below are purely depended upon experience and learned according
+                        for the project needs.</p>
                 </div>
                 <div class="card">
                     <div class="card-header nav-custom-style">
                         <ul class="nav d-flex justify-content-between font-size-adjust mode">
-                            <li [class.active]="viewMode == 'Skills'"><a type="button" (click)="viewMode = 'Skills'">Skills</a></li>
-                            <li [class.active]="viewMode == 'Experience'"><a type="button" (click)="viewMode = 'Experience'">Experience</a></li>
-                            <li [class.active]="viewMode == 'Awards'"><a type="button" (click)="viewMode = 'Awards'">Awards</a></li>
-                            <li [class.active]="viewMode == 'Education'"><a type="button" (click)="viewMode = 'Education'">Education</a></li>
+                            <li [class.active]="viewMode == 'Skills'"><a type="button"
+                                    (click)="viewMode = 'Skills'">Skills</a></li>
+                            <li [class.active]="viewMode == 'Experience'"><a type="button"
+                                    (click)="viewMode = 'Experience'">Experience</a></li>
+                            <li [class.active]="viewMode == 'Certifications'"><a type="button"
+                                    (click)="viewMode = 'Certifications'">Certifications</a></li>
+                            <li [class.active]="viewMode == 'Education'"><a type="button"
+                                    (click)="viewMode = 'Education'">Education</a></li>
                         </ul>
                     </div>
                     <div class="card-body" [ngSwitch]="viewMode">
                         <div class="col font-custom-color" *ngSwitchDefault>
                             <div class="card fade-in">
                                 <div class="card-body">
-                                    <h3>Heading</h3>
-                                    <p>Content</p>
+                                    <h3>Working Environment</h3>
+                                    <p class="text-muted">OS: Ubuntu 16.04 to 18.0, Windows 8 to 10. IDE: VSCode, PyCharm, Anaconda, Jupiter Notebook, Google Colab, Kaggle. Repository: Microsoft GitHub. </p>
                                 </div>
                                 <div class="card-body">
-                                    <h3>Heading</h3>
-                                    <p>Content</p>
+                                    <h3>Artificial Intelligence</h3>
+                                    <p class="text-muted">Most of the ML models I trained are concerning vision, which were developed with Googles Ai Frameworks TensorFlow and Keras. Some of the most common models I worked on are, FaceNet, Caffe-Net, MobileNetV2, Autoencoder, Variational Autoencoder, Google Inception v3, You Only Look Once(Yolo), R-CNN. </p>
                                 </div>
                                 <div class="card-body">
-                                    <h3>Heading</h3>
-                                    <p>Content</p>
+                                    <h3>Web Development</h3>
+                                    <p class="text-muted">When my practicality comes to web technology, my core experience depends upon 2 major frameworks Django and Angular. So-far, these 2 frameworks were integrated using APIs to implement various projects. Beyond these 2 I have also got experience on python web framework flask. </p>
                                 </div>
                             </div>
                         </div>
                         <div class="col font-custom-color" *ngSwitchCase="'Experience'">
                             <div class="card fade-in">
                                 <div class="card-body">
-                                    <h3>Heading</h3>
-                                    <p>Content</p>
+                                    <h3>Allianze Infosoft</h3>
+                                    <p class="text-muted">Ai and Full Stack Developer </p>
+                                </div>
+                            </div>
+                            <div class="card fade-in">
+                                <div class="card-body">
+                                    <h3>SMEC Labs</h3>
+                                    <p class="text-muted">Machine Learning Intern </p>
+                                </div>
+                            </div>
+                            <div class="card fade-in">
+                                <div class="card-body">
+                                    <h3>eGlobe IT Solutions</h3>
+                                    <p class="text-muted">Junior SEO Analyst  </p>
+                                </div>
+                            </div>  
+                            <div class="card fade-in">
+                                <div class="card-body">
+                                    <h3>Python Freelancer</h3>
+                                    <p class="text-muted">Django Developer </p>
                                 </div>
                             </div>
                         </div>
-                        <div class="col font-custom-color" *ngSwitchCase="'Awards'">
+                        <div class="col font-custom-color" *ngSwitchCase="'Certifications'">
                             <div class="card fade-in">
                                 <div class="card-body">
-                                    <h3>Heading</h3>
-                                    <p>Content</p>
+                                    <h3>Udemy</h3>
+                                    <p class="text-muted">Python Developer (2017), Machine Learning and Data Science Developer (2019), Full Stack Python Developer (2019), Angular 9 Development (2019) </p>
+                                </div>
+                            </div>
+                            <div class="card fade-in">
+                                <div class="card-body">
+                                    <h3>Hacker Rank</h3>
+                                    <p class="text-muted">Problem Solving Certification (2020), Python Certification (2020) </p>
                                 </div>
                             </div>
                         </div>
                         <div class="col font-custom-color" *ngSwitchCase="'Education'">
                             <div class="card fade-in">
                                 <div class="card-body">
-                                    <h3>Heading</h3>
-                                    <p>Content</p>
+                                    <h3>Collage</h3>
+                                    <p class="text-muted">Bachelor of Computer Applications (BCA)</p>
+                                </div>
+                            </div>
+                            <div class="card fade-in">
+                                <div class="card-body">
+                                    <h3>Higher Secondary (12th)</h3>
+                                    <p class="text-muted">National Institute of Open Schooling</p>
+                                </div>
+                            </div>
+                            <div class="card fade-in">
+                                <div class="card-body">
+                                    <h3>High School (10th)</h3>
+                                    <p class="text-muted">Kerala University</p>
                                 </div>
                             </div>
                         </div>

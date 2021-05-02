@@ -1,15 +1,17 @@
-<section class="container-fluid bg-black-dark font-color-white pd-0 fade-in">
-    <div class="row row-margin-0 min-height-400 py-60 banner-image align-items-center justify-content-center bg-custom  ">
-        <div class="banner-text">
+<section class="container-fluid bg-custom font-color-white pd-0 fade-in">
+    <div class="bg-black-dark" id="particles-js">
+        <div class="banner-text font-color-white">
             <h3 class="text-uppercase letter-spacing-10">Projects</h3>
         </div>
     </div>
+    <!-- <div class="row row-margin-0 min-height-400 py-60 align-items-center justify-content-center bg-custom">
+    </div> -->
     <div class="container container-width-70 py-120" *ngFor="let data of projects">
         <div class="row mt-5">
             <div class="col-md-4 mb-3" *ngFor="let project of data">
                 <div class="card min-height-500 text-center font-color-white">
                     <div class="card-body d-flex flex-column justify-content-center align-items-center">
-                        <h2>{{project.projectName}}</h2>
+                        <a (click)="selectedProject(project.slug)"><h2>{{project.projectName}}</h2></a>
                         <p>{{project.projectMeta}}</p>
                     </div>
                     <div class="card-footer">

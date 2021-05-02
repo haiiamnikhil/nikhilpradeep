@@ -20,6 +20,10 @@ export class ApiServices {
   }
 
   listProjects():Observable<any>{
-    return this.http.get('api/list-projects/',{headers: this.HttpHeaders})
+    return this.http.get('/api/list-projects/',{headers: this.HttpHeaders})
+  }
+
+  contactDetails(data:any):Observable<any>{
+    return this.http.post('/api/contact-details/',data,{headers: this.HttpHeaders})
   }
 }

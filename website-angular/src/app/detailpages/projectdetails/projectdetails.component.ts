@@ -29,9 +29,9 @@ export class ProjectdetailsComponent implements OnInit {
         this.data.push(response.data[0])
         this.tech.push(response.tech)
         console.log(this.tech[0])
+        this.invokeParticles();
       }
     },err => console.log(err));
-    this.invokeParticles();
   }
 
   public invokeParticles(): void {

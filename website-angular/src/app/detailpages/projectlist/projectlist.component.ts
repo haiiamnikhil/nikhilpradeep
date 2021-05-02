@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ApiServices } from 'src/app/Api/api.service';
+import { ParticlesConfig } from '../../particles-config';
+
+declare let particlesJS:any
 
 @Component({
   selector: 'app-projectlist',
@@ -19,10 +22,15 @@ export class ProjectlistComponent implements OnInit {
         console.log(this.projects)
       }
     },err => console.log(err))
+    this.invokeParticles();
   }
 
   selectedProject(project:any){
     this.router.navigate(['/projects',project])
+  }
+
+  public invokeParticles(): void {
+    particlesJS('particles-js', ParticlesConfig, function() {});
   }
 
 }
