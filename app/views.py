@@ -5,11 +5,20 @@ from .serializers import *
 from django.http import JsonResponse
 
 
+def projectsList(request):
+    if request.method == 'GET':
+        projects = Projects.objects.all()
+        serializer = ProjectSerializer(projects,many=True)
+        print(serializer.data)
+        return JsonResponse({'status':True,'data':serializer.data},safe=False,status=200)
+
+
+
 @csrf_exempt
 def projectDetails(request,projectname):
     if request.method == 'POST':
         project = Projects.objects.filter(slug=projectname)
-        serializer = ProjectSerializer(project,many=True)
+        serializer = ProjectDetailsSerializer(project,many=True)
 
         tags = ProjectTech.objects.filter(projectName=serializer.data[0]['id'])
         tagSerializer = TagSerializer(tags,many=True)
@@ -21,7 +30,7 @@ def projectDetails(request,projectname):
 
 def latestProject(request):
     if request.method == 'GET':
-        projects = Projects.objects.order_by('-uploadedDate')[:1]
+        projects = Projects.objects.order_by('-uploadedDate')[:3]
         print(projects)
         serializer = LatestProjects(projects,many=True)
         print(serializer.data)

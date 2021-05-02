@@ -2,9 +2,7 @@
     width: 100%;
     display: flex;
     background-repeat: no-repeat;
-    background-color: #4e4984;
     background-position: center;
-    background-image: url('../../../assets/banners/portfolio-background-header.jpg');
     background-size: cover;
     position: relative;
 }
@@ -17,15 +15,15 @@
     margin: 0;
 }
 
-.overlay{
+/* .overlay{
     width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
     left: 0;
-    background-color: black;
+    background-color: rgb(20, 20, 20);
     opacity: 0.85;
-}
+} */
 
 .banner-text{
     z-index: 10;
@@ -81,3 +79,15 @@
     background-color:unset;
     border-top: unset;
 }
+
+
+  .banner-text h3{
+    font-size: 90px;
+    font-weight: bold;
+    background: linear-gradient(to bottom right,#f9004d,#3c0707);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    line-height: .77;
+    transition: 0.5s ease-in-out;
+  }

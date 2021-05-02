@@ -7,4 +7,5 @@ urlpatterns = [
     path('projects/',TemplateView.as_view(template_name="projects.html"),name="projectsView"),
     path('projects/<str:projectname>/',projectDetails,name="projectsDetails"),
     path('api/latest-projects/',latestProject,name="latestProjectView"),
+    path('api/list-projects/',projectsList,name="projectsList"),
 ]

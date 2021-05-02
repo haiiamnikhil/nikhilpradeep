@@ -18,4 +18,8 @@ export class ApiServices {
   latestProjects():Observable<any>{
     return this.http.get('/api/latest-projects/',{headers: this.HttpHeaders})
   }
+
+  listProjects():Observable<any>{
+    return this.http.get('api/list-projects/',{headers: this.HttpHeaders})
+  }
 }
