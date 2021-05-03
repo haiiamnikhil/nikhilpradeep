@@ -50,3 +50,9 @@ class SkillsSerializer(serializers.ModelSerializer):
     class Meta:
         model = Skills
         fields = '__all__'
+
+
+class ServiceSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Services
+        fields = '__all__'

@@ -108,3 +108,15 @@ class Skills(models.Model):
 
     def __str__(self):
         return self.heading
+
+
+class Services(models.Model):
+    heading = models.CharField(max_length=50, unique=True,null=True,blank=False)
+    servicesMetta = models.TextField(max_length=256,null=True,blank=False)
+    description = models.TextField(max_length=500,blank=False,null=True)
+
+    class Meta:
+        verbose_name_plural = 'Services'
+
+    def __str__(self):
+        return self.heading
