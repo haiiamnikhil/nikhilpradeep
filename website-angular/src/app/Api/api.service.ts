@@ -26,4 +26,8 @@ export class ApiServices {
   contactDetails(data:any):Observable<any>{
     return this.http.post('/api/contact-details/',data,{headers: this.HttpHeaders})
   }
+
+  aboutme():Observable<any>{
+    return this.http.get('/api/about/',{headers: this.HttpHeaders})
+  }
 }

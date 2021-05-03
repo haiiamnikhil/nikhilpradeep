@@ -10,4 +10,6 @@ urlpatterns = [
     path('api/list-projects/',projectsList,name="projectsList"),
 
     path('api/contact-details/',contact,name="contactDetails"),
+
+    path('api/about/',about,name="about"),
 ]

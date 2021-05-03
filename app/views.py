@@ -39,9 +39,33 @@ def latestProject(request):
 def contact(request):
     if request.method == 'POST':
         data = JSONParser().parse(request)
+        
         try:
             contact = Contact.objects.create(
                 firstName=data['firstName'], lastName=data['lastName'],emailId=data['email'],message=data['message'])
             return JsonResponse({'status':True,'message':'Form Submitted SuccesFully'},safe=False, status=200)
+
         except:
             return JsonResponse({'status':False,'message':'There was an Error on Submiting Form. Please try again or after Sometime'},safe=False, status=200)
+
+
+def about(request):
+    if request.method == 'GET':
+        aboutme = Aboutme.objects.all()
+        aboutmeSerializer = AboutmeSerializer(aboutme,many=True)
+
+        education = Education.objects.all()
+        educationSerializer = EducationSerializer(education,many=True)
+
+        experience = Experiences.objects.all()
+        experienceSerializer = ExperienceSerializer(experience,many=True)
+
+        certification = Certification.objects.all()
+        certificationSerializer = CertificationSerializer(certification,many=True)
+
+        skills = Skills.objects.all()
+        skillsSerializer = SkillsSerializer(skills,many=True)
+
+        return JsonResponse({'status':True,
+        'about':aboutmeSerializer.data, 'education':educationSerializer.data , 'experience':experienceSerializer.data,
+        'certification':certificationSerializer.data, 'skills':skillsSerializer.data})

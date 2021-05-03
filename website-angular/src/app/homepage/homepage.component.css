@@ -12,3 +12,60 @@
 .letter-spacing-custom{
     letter-spacing: 5px;
 }
+
+.font-animate {
+	background: linear-gradient(90deg, #e4074d, #e08a09, rgb(221, 18, 177), rgb(12, 154, 211));
+	/* color:rgb(221, 18, 177), rgb(15, 109, 233); */
+	background-size: 200% 200%;
+	-webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;
+	animation: gradient 5s ease-in-out infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.align-image{
+	position: absolute;
+}
+
+
+.icon-image{
+	display:flex;
+	flex-direction: column;
+	justify-content:center;
+	align-items:center;
+	position: relative;
+	color:white;
+}
+
+/* .icon-image  .icon-name:hover{
+	opacity: 1;
+}
+
+.icon-image  .icon-name{
+	position: absolute;
+	color: white;
+	width: 100%;
+    height: 100%;
+	background-color: rgb(156, 40, 172);
+	opacity: 0;
+	border-radius: 15px;
+	transition: 0.2s linear;
+}
+
+.icon-name span{
+	height: 100%;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+} */

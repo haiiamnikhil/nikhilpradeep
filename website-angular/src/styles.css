@@ -3,7 +3,22 @@
 
 @font-face{
     font-family: "Poppins";
-    src: local("Poppins"), url("./assets/fonts/Poppins/Poppins-SemiBold.ttf")
+    src: local("Poppins"), url("./assets/fonts/Poppins/Poppins-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "OpenSans";
+  src: local("OpenSans"),url("./assets/fonts/OpenSans/OpenSans-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto"),url("./assets/fonts/Roboto/Roboto-Regular.ttf");
+}
+
+@font-face {
+  font-family: "OpenSans-Bold";
+  src: local("OpenSans-Bold"),url("./assets/fonts/OpenSans/OpenSans-Bold.ttf");
 }
 
 html {
@@ -16,10 +31,17 @@ body{
     overflow-x: hidden;
 }
 
-*{
+h1, h2, h3, h4, h5, h6{
     font-family: "Poppins";
 }
 
+p{
+  font-family: "OpenSans";
+}
+
+span{
+  font-family: "OpenSans-Bold";
+}
 
 ::-webkit-scrollbar-track
 {
