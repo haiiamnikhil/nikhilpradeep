@@ -15,6 +15,7 @@ import { ProjectlistComponent } from './detailpages/projectlist/projectlist.comp
 import { ProjectdetailsComponent } from './detailpages/projectdetails/projectdetails.component';
 import { ScrollingModule } from '@angular/cdk/scrolling'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ServicesdetailsComponent } from './detailpages/servicesdetails/servicesdetails.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ProjectsComponent,
     HiremeComponent,
     ProjectlistComponent,
-    ProjectdetailsComponent
+    ProjectdetailsComponent,
+    ServicesdetailsComponent
   ],
   imports: [
     BrowserModule,

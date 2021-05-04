@@ -30,4 +30,8 @@ export class ApiServices {
   aboutme():Observable<any>{
     return this.http.get('/api/about/',{headers: this.HttpHeaders})
   }
+
+  listServices():Observable<any>{
+    return this.http.get('/api/list-services/',{headers: this.HttpHeaders})
+  }
 }

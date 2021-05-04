@@ -12,4 +12,7 @@ urlpatterns = [
     path('api/contact-details/',contact,name="contactDetails"),
 
     path('api/about/',about,name="about"),
+
+    path('api/list-services/',servicesList, name="servicesList"),
+    path('service/<str:servicename>/',servicesDetails,name="servicesDetails"),
 ]

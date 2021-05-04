@@ -31,6 +31,14 @@
   color: white;
 }
 
+.section-title h2::after{
+  left: 0;
+}
+
+.section-title h2:hover::after{
+  width:30%;
+}
+
 a {
   color: #fff;
   text-transform: uppercase;
@@ -46,7 +54,7 @@ a {
   content: "";
   display: block;
   height: 2px;
-  left: 50%;
+  left: 0;
   position: absolute;
   background: #f9004d;
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
@@ -54,7 +62,12 @@ a {
 }
 .mode a:hover:after {
   width: 100%;
-  left: 0;
+  right: 0;
+}
+
+.mode a.active::after{
+  width: 100%;
+  right:0;
 }
 
 .detail-view {

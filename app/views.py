@@ -69,3 +69,21 @@ def about(request):
         return JsonResponse({'status':True,
         'about':aboutmeSerializer.data, 'education':educationSerializer.data , 'experience':experienceSerializer.data,
         'certification':certificationSerializer.data, 'skills':skillsSerializer.data})
+
+
+def servicesList(request):
+    if request.method == 'GET':
+        services = Services.objects.all()
+        serializer = ServiceSerializer(services,many=True)
+        return JsonResponse({'status':True,'data':serializer.data},safe=False,status=200)
+
+
+@csrf_exempt
+def servicesDetails(request,servicename):
+    if request.method == 'POST':
+        service = Services.objects.filter(slug=servicename)
+        serializer = ServiceSerializer(service,many=True)
+
+        return JsonResponse({'status':True,'data':serializer.data},safe=True,status=200)
+
+    return render(request,'servicesDetails.html')

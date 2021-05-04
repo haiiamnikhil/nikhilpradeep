@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ApiServices } from 'src/app/Api/api.service';
 
 @Component({
   selector: 'app-services',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServicesComponent implements OnInit {
 
-  constructor() { }
+  services:any = []
 
-  ngOnInit(): void {
+  constructor( private api: ApiServices, private router: Router) { }
+
+  ngOnInit() {
+    this.api.listServices().subscribe(response => {
+      if (response.status){
+        this.services.push(response.data)
+        console.log(response)
+      }
+    }, err => console.log(err))
+  }
+
+  selectedService(serviceId:any){
+    this.router.navigate(['/service',serviceId])
   }
 
 }

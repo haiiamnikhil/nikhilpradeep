@@ -149,6 +149,28 @@ h2:after {
       transform: none;
     }
   }
+
+  .font-animate{
+    background: linear-gradient(90deg, #e4074d, #e08a09, rgb(221, 18, 177), rgb(12, 154, 211));
+    /* color:rgb(221, 18, 177), rgb(15, 109, 233); */
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient 5s ease-in-out infinite;
+  }
+  
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
   .container{
     opacity: 0;
     animation: fadeInUp 1s ease-in-out 0s forwards;
@@ -225,6 +247,10 @@ h2:after {
 
 .font-size-50-plus{ 
     font-size: 75px;
+}
+
+.letter-spacing-10{
+  letter-spacing: 10px;
 }
 
 .bg-black-gradient{ 
@@ -347,33 +373,14 @@ h2:after {
   position:relative;
 }
 
-
-.bg {
-  animation:slide 3s ease-in-out infinite alternate;
-  background-image: linear-gradient(45deg, rgb(0, 0, 0) 50%, #1f1e1e 50%);
-  bottom:0;
-  left:-50%;
-  opacity:.5;
-  position:absolute;
-  right:-50%;
-  top:0;
-  z-index:-1;
+.banner-text h1{
+  font-size: 60px;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: .77;
+  transition: 0.5s ease-in-out;
 }
 
-.bg2 {
-  animation-direction:alternate-reverse;
-  animation-duration:4s;
-}
-
-.bg3 {
-  animation-duration:5s;
-}
-
-@keyframes slide {
-  0% {
-    transform:translateX(-25%);
-  }
-  100% {
-    transform:translateX(25%);
-  }
+.banner-text{
+    position: absolute;
 }
