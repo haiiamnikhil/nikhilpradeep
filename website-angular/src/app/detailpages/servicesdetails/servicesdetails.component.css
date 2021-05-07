@@ -8,3 +8,14 @@
 .banner-heading{
     position: absolute;
 }
+
+/* @media screen and (max-width:1456px){
+    .col-xl-12{
+        flex-direction: column;
+    }
+} */
+
+.service-content{
+    max-width: 100% !important;
+  }
+  

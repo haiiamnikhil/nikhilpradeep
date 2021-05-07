@@ -27,8 +27,6 @@ export class AboutmeComponent implements OnInit {
         this.skills.push(response.skills)
         this.experience.push(response.experience)
         this.educations.push(response.education)
-        console.log(this.certifications)
-        console.log(response)
       }
     },err=> console.log(err))
   }

@@ -17,7 +17,6 @@ export class ServicesComponent implements OnInit {
     this.api.listServices().subscribe(response => {
       if (response.status){
         this.services.push(response.data)
-        console.log(response)
       }
     }, err => console.log(err))
   }

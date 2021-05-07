@@ -34,4 +34,13 @@ export class ApiServices {
   listServices():Observable<any>{
     return this.http.get('/api/list-services/',{headers: this.HttpHeaders})
   }
+
+  serviceDetails(data:any):Observable<any>{
+    return this.http.post('/service/'+data+'/',{headers: this.HttpHeaders})
+  }
+
+  getResume():Observable<any>{
+    return this.http.get('/api/get-latest-resume/',{headers: this.HttpHeaders})
+  }
+  
 }

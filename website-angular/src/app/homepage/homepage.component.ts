@@ -1,4 +1,5 @@
-import { ScrollDispatcher } from '@angular/cdk/scrolling';
+import { ApiServices } from 'src/app/Api/api.service';
+
 import { Component, OnInit } from '@angular/core';
 
 
@@ -8,12 +9,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./homepage.component.css']
 })
 export class HomepageComponent implements OnInit {
-  isActive:boolean = false;
-  constructor(private scroll: ScrollDispatcher) { }
+  
+  resume:File
+
+  constructor(private api :ApiServices) { }
 
   ngOnInit(): void {
-    this.isActive = true;
-    // this.scroll.scrolled().subscribe(response => console.log('scrolled'))
+    this.api.getResume().subscribe(response => {
+      if (response.status){
+        this.resume = response.data[0].resume
+      }
+    },err => console.log(err))
   }
 
 }

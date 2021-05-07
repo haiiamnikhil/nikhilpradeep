@@ -6,6 +6,13 @@ from django.http import JsonResponse
 from rest_framework.parsers import JSONParser
 
 
+def downloadResume(request):
+    resume = Resume.objects.order_by('-uploadDate')[:1]
+    serializer = ResumeSerializer(resume,many=True)
+
+    return JsonResponse({'status':True,'data':serializer.data},safe=False,status=200)
+
+
 def projectsList(request):
     if request.method == 'GET':
         projects = Projects.objects.all()

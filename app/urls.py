@@ -15,4 +15,6 @@ urlpatterns = [
 
     path('api/list-services/',servicesList, name="servicesList"),
     path('service/<str:servicename>/',servicesDetails,name="servicesDetails"),
+
+    path('api/get-latest-resume/',downloadResume,name="resume")
 ]

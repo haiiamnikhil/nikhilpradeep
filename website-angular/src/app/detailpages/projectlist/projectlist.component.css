@@ -82,3 +82,12 @@
       justify-content:center;
       height:400px;
   }
+
+  @media screen and (max-width:1510px){
+    .project-list{
+      flex-direction: column;
+    }
+    .project-list .col-md-4{
+        max-width:100%;
+    }
+  }

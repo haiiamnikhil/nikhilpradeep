@@ -1,12 +1,14 @@
-<section class="container-fluid fade-in">
+<section class="container-fluid fade-in service-details">
     <div class="banner-component" id="particles-js">
         <div class="banner-text font-color-white">
-            <h1 class="letter-spacing-10">Service</h1>
+            <h1 class="letter-spacing-10">{{serviceHeading}}</h1>
         </div>
     </div>
-    <div class="container container-width-70 py-120">
-        <div class="row">
-            <h1>Hello World</h1>
+    <div class="row flex-column font-color-white bg-custom">
+        <div class="container container-width-70 py-60" *ngFor="let data of serviceDetails">
+            <div class="col-xl-12 d-flex align-items-center justify-content-center min-height-500 py-60 mb-4" [innerHtml]=data>
+                
+            </div>
         </div>
     </div>
 </section>

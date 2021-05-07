@@ -1,6 +1,17 @@
 from django.db import models
 
 
+class Resume(models.Model):
+    fileName = models.CharField(max_length=50,blank=False,null=True)
+    resume = models.FileField(upload_to='Resume/',null=True,blank=False)
+    uploadDate = models.DateField(auto_now=True)
+
+    class Meta:
+        verbose_name_plural = 'Resume'
+
+    def __str__(self):
+        return self.fileName
+
 class Projects(models.Model):
     slug = models.CharField(max_length=100,unique=True,blank=False,null=True)
     projectHeading = models.CharField(max_length=100,unique=True,null=True,blank=False)
@@ -113,12 +124,13 @@ class Skills(models.Model):
 class Services(models.Model):
     slug = models.CharField(max_length=100,unique=True,null=True,blank=False)
     heading = models.CharField(max_length=50, unique=True,null=True,blank=False)
+    detailedHeading = models.CharField(max_length=100,unique=True,null=True,blank=False)
     servicesMetta = models.TextField(max_length=256,null=True,blank=False)
-    description = models.TextField(max_length=500,blank=False,null=True)
+    description = models.TextField(blank=False,null=True)
     bannerImage = models.FileField(upload_to="Static-Images/",null=True,blank=True)
 
     class Meta:
         verbose_name_plural = 'Services'
 
     def __str__(self):
-        return self.heading
+        return self.detailedHeading

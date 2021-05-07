@@ -35,8 +35,22 @@ h1, h2, h3, h4, h5, h6{
     font-family: "Poppins";
 }
 
+h2{
+  font-size: 30px !important;
+}
+
+h3{
+  font-size: 26px !important;
+}
+
 p{
   font-family: "OpenSans";
+  margin-bottom: 2rem;
+  line-height: 28px;
+}
+
+ul{
+  font-family: 'OpenSans';
 }
 
 span{
@@ -177,6 +191,11 @@ h2:after {
   }
   .container{
     animation-delay: 0.2s;
+  }
+
+  .image-responsive{
+    width:100%;
+    height:auto;
   }
 
 .min-height-600{
@@ -383,4 +402,173 @@ h2:after {
 
 .banner-text{
     position: absolute;
+}
+
+.custom-ul{
+  padding-inline-start: 0;
+  list-style: inside;
+  line-height: 35px;
+}
+
+/* .col-md-6{
+  max-width: 100% !important;
+} */
+
+#particles-js{
+  width: 100%;
+  position:relative;
+}
+
+.hire-me-image{
+  display: block;
+}
+
+.about-image{
+  display: block;
+}
+
+.banner-text{
+  display: flex;
+  align-items: center;
+}
+
+#index .col-xl-12{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.service-details .service-image{
+  display:block;
+}
+
+@media screen and (max-width:1510px){
+  .service-details .service-image{
+    display: none;
+  }
+}
+
+@media screen and (max-width:1510px){
+  .about-image{
+    display: none;
+  }
+}
+
+@media screen and (max-width:1000px){
+  .banner-text{
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .banner-text h1{
+    line-height:1;
+  }
+}
+
+@media screen and (max-width:700px){
+  .banner-text h1{
+    font-size: 35px;
+  }
+}
+
+@media screen and (max-width:680px){
+  .font-size-50-plus{
+    font-size: 40px;
+  }
+  strong{
+    font-size: 50px;
+  }
+}
+
+@media screen and (max-width:1000px){
+  .container-width-70{
+    max-width: 90% !important;
+  }
+}
+
+@media screen and (max-width:1675px){
+  .mode li{
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width:350px){
+  h2{
+    font-size: 26px !important;
+  }
+  
+  h3{
+    font-size: 22px !important;
+  }
+}
+
+@media screen and (max-width:1510px){
+  .py-120{
+    padding: 60px 0;
+  }
+}
+
+@media screen and (max-width:1510px){
+  #service .content{
+    flex-direction: column;
+  }
+  #service .col-md-4{
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width:1510px){
+  #about .row{
+    flex-direction: column;
+    align-items: center;
+  }
+  #about .row .col-md-5{
+    max-width: 60%;
+  }
+  #about .row .col-md-7{
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width:1510px){
+  #project .row-content{
+    flex-direction: column;
+  }
+  #project .row-content .col-md-4{
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width:1510px){
+  #contact .content{
+    flex-direction: column;
+  }
+  #contact .hire-me-image{
+    display: none !important;
+  }
+  .project-details .col-md-8{
+    max-width: 100%;
+  }
+}
+
+@media screen and (min-width:921px){
+  section .icons{
+    justify-content: space-between !important;
+  }
+}
+
+@media screen and (max-width:920px){
+  section .icons{
+    justify-content: center !important;
+  }
+}
+
+@media screen and (max-width:1075px){
+  .project-repo{
+    display: flex;
+    justify-content: center;
+  }
 }
