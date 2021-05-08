@@ -25,7 +25,10 @@
                             [ngClass]="{'is-invalid': !form.get('message').valid && form.get('message').touched, 'is-valid': form.get('message').valid && form.get('message').touched}"></textarea>
                         </div>
                         <div class="submit-button">
-                            <button class="btn btn-outline-danger btn-lg" [disabled]="!form.valid" (click)="postDetails()"><i class="fa fa-paper-plane mx-1"></i>Submit</button>
+                            <!-- <div class="spinner-border text-danger" role="status">
+                                <span class="sr-only">Loading...</span>
+                              </div> -->
+                            <button class="btn btn-outline-danger btn-lg" [disabled]="!form.valid || isBusy" (click)="postDetails()"><i class="fa mx-2" [ngClass]="{'fa-paper-plane':!isBusy,'spinner-border text-danger':isBusy}"></i>Submit</button>
                         </div>
                     </div>
                 </form>

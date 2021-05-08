@@ -11,7 +11,7 @@ import Swal from 'sweetalert2'
 export class HiremeComponent implements OnInit {
 
   form:FormGroup
-
+  isBusy:boolean = false
 
   constructor(private api : ApiServices, private formBuilder: FormBuilder) { }
 
@@ -32,22 +32,21 @@ export class HiremeComponent implements OnInit {
       showConfirmButton:false,
       timer:2500
     })
+    this.form.reset()
   }
 
   postDetails(){
+    this.isBusy = true
     let details = {
       firstName : this.form.get('firstname').value, 
       lastName : this.form.get('lastname').value, 
       email : this.form.get('email').value, 
       message : this.form.get('message').value
     }
-    console.log(details)
     this.api.contactDetails(details).subscribe(response => {
       if (response.status){
+        this.isBusy = false
         this.sweetAlert(response.message)
-      }
-      else{
-
       }
     }, err => console.log(err))
   }

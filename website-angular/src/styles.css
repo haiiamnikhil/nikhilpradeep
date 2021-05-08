@@ -410,9 +410,9 @@ h2:after {
   line-height: 35px;
 }
 
-/* .col-md-6{
+.col-md-6{
   max-width: 100% !important;
-} */
+}
 
 #particles-js{
   width: 100%;
@@ -570,5 +570,15 @@ h2:after {
   .project-repo{
     display: flex;
     justify-content: center;
+  }
+}
+
+@media screen and (max-width:500px){
+  .bottom-nav{
+    flex-direction: column;
+    line-height: 2;
+  }
+  .footer-bottom{
+    flex-direction: column;
   }
 }
