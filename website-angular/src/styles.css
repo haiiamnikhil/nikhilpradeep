@@ -442,6 +442,10 @@ h2:after {
   display:block;
 }
 
+#particle-container{
+  display: block;
+}
+
 @media screen and (max-width:1510px){
   .service-details .service-image{
     display: none;
@@ -471,21 +475,39 @@ h2:after {
 @media screen and (max-width:700px){
   .banner-text h1{
     font-size: 35px;
+    text-align: center;
+  }
+  .min-height-900{
+    min-height: 500px;
+  }
+  #particle-container{
+    display: none;
   }
 }
 
 @media screen and (max-width:680px){
   .font-size-50-plus{
-    font-size: 40px;
+    font-size: 35px;
   }
-  strong{
+  .font-strong{
     font-size: 50px;
+  }
+  .intro-text{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .designation{
+    font-size: 12px;
   }
 }
 
 @media screen and (max-width:1000px){
   .container-width-70{
-    max-width: 90% !important;
+    max-width: 95% !important;
   }
 }
 

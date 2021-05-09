@@ -98,3 +98,7 @@ a {
 .image-responsive{
     width:100%;
 }
+
+.mode li:hover{
+  cursor:pointer;
+}

@@ -11,6 +11,7 @@ body{
 }
 #centerdiv ul {
     display: flex;
+    padding: 0;
 }
 #centerdiv ul li {
     list-style: none;
