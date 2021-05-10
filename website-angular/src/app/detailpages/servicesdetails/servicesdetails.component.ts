@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { DomSanitizer, SafeHtml, Title } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 import { ApiServices } from 'src/app/Api/api.service';
 import { ParticlesConfig } from '../../particles-config';
@@ -17,7 +17,7 @@ export class ServicesdetailsComponent implements OnInit {
   serviceDetails:any = []
   serviceHeading:string
 
-  constructor(private activeRoute : ActivatedRoute, private api : ApiServices, private domSanitizer : DomSanitizer) { }
+  constructor(private activeRoute : ActivatedRoute, private api : ApiServices, private domSanitizer : DomSanitizer, private title : Title) { }
 
   ngOnInit(){
     let serviceId = this.activeRoute.snapshot.paramMap.get('serviceid')
@@ -27,6 +27,7 @@ export class ServicesdetailsComponent implements OnInit {
         this.serviceDetails.push(response.data[0].description)
         this.serviceHeading = response.data[0].detailedHeading
         this.safeHtml = this.domSanitizer.bypassSecurityTrustHtml(this.serviceDetails)
+        this.title.setTitle(this.serviceHeading)
       }
     },err => console.log(err))
   }

@@ -18,10 +18,20 @@ from django.urls import path, include
 from django.conf.urls.static import static
 from django.conf import settings
 
+from app.sitemaps import *
+from django.contrib.sitemaps.views import sitemap
+
+sitemaps = {
+    'staic':StaticViewSitemap,
+    'projects':ProjectsSitemap,
+    'services':ServiceDetailsSitemap,
+}
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('app.urls')),
+    path('sitemap.xml', sitemap ,{'sitemaps':sitemaps}),
 ] + static(settings.STATIC_URL,document_root=settings.STATICFILES_DIRS)
 
 urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

@@ -46,11 +46,12 @@
   color: white;
 }
 
+
 .logo {
-  width: 80%;
+  width: 75px;
 }
 
-.cls-1 {
+/* .cls-2 {
   -webkit-animation: colorchange 20s infinite alternate;
 }
 
@@ -98,4 +99,4 @@
   100% {
     fill: rgb(247, 0, 255);
   }
-}
+} */

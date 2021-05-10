@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ApiServices } from 'src/app/Api/api.service';
 import { ParticlesConfig } from '../../particles-config';
@@ -17,7 +18,7 @@ export class ProjectdetailsComponent implements OnInit {
   tagline:string
   tech:any =[]
 
-  constructor(private api:ApiServices, private activeRouter: ActivatedRoute) { }
+  constructor(private api:ApiServices, private activeRouter: ActivatedRoute, private title :Title) { }
 
   ngOnInit(){
     let projectName = this.activeRouter.snapshot.paramMap.get('projectid');
@@ -28,7 +29,7 @@ export class ProjectdetailsComponent implements OnInit {
         this.tagline = response.data[0].projectTagline
         this.data.push(response.data[0])
         this.tech.push(response.tech)
-        console.log(this.tech[0])
+        this.title.setTitle(this.heading)
         this.invokeParticles();
       }
     },err => console.log(err));

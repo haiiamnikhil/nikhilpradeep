@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { ApiServices } from 'src/app/Api/api.service';
 import { ParticlesConfig } from '../../particles-config';
@@ -13,13 +14,13 @@ declare let particlesJS:any
 export class ProjectlistComponent implements OnInit {
 
   projects:any=[];
-  constructor(private router: Router, private api: ApiServices) { }
+  constructor(private router: Router, private api: ApiServices, private title : Title) { }
 
   ngOnInit(){
     this.api.listProjects().subscribe(response => {
       if (response.status){
         this.projects.push(response.data)
-        console.log(this.projects)
+        this.title.setTitle('Projects')
       }
     },err => console.log(err))
     this.invokeParticles();

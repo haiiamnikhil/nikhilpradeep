@@ -265,7 +265,11 @@ h2:after {
 }
 
 .font-size-50-plus{ 
-    font-size: 75px;
+    font-size: 50px;
+}
+
+.font-size-70-plus{
+  font-size: 70px;
 }
 
 .letter-spacing-10{
@@ -478,11 +482,16 @@ h2:after {
     text-align: center;
   }
   .min-height-900{
-    min-height: 500px;
+    min-height: 750px;
   }
   #particle-container{
     display: none;
   }
+  .container, .container-width-70{
+    max-width: 100% !important;
+    margin: 0 5px 0 5px;
+  }
+  
 }
 
 @media screen and (max-width:680px){
@@ -507,7 +516,7 @@ h2:after {
 
 @media screen and (max-width:1000px){
   .container-width-70{
-    max-width: 95% !important;
+    max-width: 95%;
   }
 }
 
@@ -599,8 +608,5 @@ h2:after {
   .bottom-nav{
     flex-direction: column;
     line-height: 2;
-  }
-  .footer-bottom{
-    flex-direction: column;
   }
 }

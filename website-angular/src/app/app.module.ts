@@ -1,5 +1,5 @@
 import { ApiServices } from './Api/api.service';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, Title } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
@@ -41,7 +41,7 @@ import { ParticlesComponent } from './homepage/particles/particles.component';
     FormsModule,
     ReactiveFormsModule,
   ],
-  providers: [ApiServices],
+  providers: [ApiServices, Title],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
