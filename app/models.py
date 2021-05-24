@@ -23,7 +23,7 @@ class Projects(models.Model):
     projectDescription = models.TextField(max_length=500,blank=False,null=True)
     projectThumpnailImage = models.FileField(upload_to='Images/Project/Thumpnails/',null=True)
     projectDetailsImage = models.FileField(upload_to='Images/Project/Details/',null=True)
-    projectGithub = models.URLField(max_length=200,unique=False,null=True,blank=False)
+    projectGithub = models.URLField(max_length=200,unique=False,null=True,blank=True)
     uploadedDate = models.DateField(auto_now=True)
     updatedDate  = models.DateField(auto_now=True)
 
