@@ -43,7 +43,7 @@ h3{
   font-size: 26px !important;
 }
 
-p{
+p,a{
   font-family: "OpenSans";
   margin-bottom: 2rem;
   line-height: 28px;
