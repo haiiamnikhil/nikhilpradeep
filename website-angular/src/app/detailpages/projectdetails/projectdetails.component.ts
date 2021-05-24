@@ -22,7 +22,6 @@ export class ProjectdetailsComponent implements OnInit {
 
   ngOnInit(){
     let projectName = this.activeRouter.snapshot.paramMap.get('projectid');
-    console.log(projectName)
     this.api.getProject(projectName).subscribe(response => {
       if (response.status){
         this.heading = response.data[0].projectHeading
